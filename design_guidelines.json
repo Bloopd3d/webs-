@@ -1,0 +1,127 @@
+{
+  "brand_identity": {
+    "name": "La Calandria",
+    "archetype": "Organic & Earthy",
+    "vibe": "Rustic-Modern, Warm, Gastronomic, Inclusive",
+    "core_values": ["Nature", "Quality", "Community", "Comfort"],
+    "theme_mode": "light"
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Playfair Display, serif",
+      "weights": ["400", "600", "700"],
+      "usage": "Main titles, Section headers, Dish names",
+      "letter_spacing": "tracking-tight"
+    },
+    "body": {
+      "font_family": "Manrope, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Descriptions, UI elements, Buttons",
+      "letter_spacing": "tracking-normal"
+    },
+    "accents": {
+      "font_family": "Caveat, cursive",
+      "usage": "Special offers, 'Pet Friendly' tags, Handwritten notes"
+    }
+  },
+  "colors": {
+    "primary": {
+      "name": "Olive Grove",
+      "hex": "#4A5D23",
+      "tailwind": "bg-[#4A5D23] text-white"
+    },
+    "secondary": {
+      "name": "Terracotta",
+      "hex": "#C1666B",
+      "tailwind": "bg-[#C1666B] text-white"
+    },
+    "background": {
+      "main": "#FAF9F6",
+      "paper": "#F0EFEA",
+      "tailwind": "bg-[#FAF9F6]"
+    },
+    "text": {
+      "primary": "#2C3E50",
+      "secondary": "#5D6D7E",
+      "tailwind": "text-[#2C3E50]"
+    },
+    "ui": {
+      "border": "#E5E7EB",
+      "success": "#27AE60",
+      "warning": "#F39C12"
+    }
+  },
+  "layout_strategy": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "spacing": "Generous padding (py-16, py-24) to create breathing room.",
+    "grid_system": "Bento Grid for Menu Categories (Asymmetric)",
+    "mobile": "Stack vertically, use horizontal scroll for categories."
+  },
+  "components": {
+    "header": {
+      "style": "Sticky, Glassmorphism (Blur 12px), Cream background with 80% opacity.",
+      "elements": ["Logo (Left)", "Nav Links (Center)", "Book Now Button (Right)"]
+    },
+    "hero": {
+      "style": "Full-screen immersive image with slow zoom effect.",
+      "content": "Centered elegant typography, 'Reservar Mesa' CTA."
+    },
+    "menu": {
+      "style": "Filterable Grid. Cards with rounded corners (rounded-xl), subtle shadow, image on top.",
+      "interactions": "Hover: Lift up (-translate-y-1), Shadow increase."
+    },
+    "reservations": {
+      "style": "Clean Shadcn Form embedded in a 'Paper' textured container.",
+      "features": ["Date Picker", "Time Slots", "Guest Count", "Confirmation Modal"]
+    },
+    "footer": {
+      "style": "Dark Olive background (#2F3E1B), Light Cream text.",
+      "content": ["Map", "Social Links", "Contact Info", "Quick Links"]
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": "https://images.pexels.com/photos/7936026/pexels-photo-7936026.jpeg",
+      "menu_risotto": "https://images.pexels.com/photos/34759470/pexels-photo-34759470.jpeg",
+      "menu_sushi": "https://images.pexels.com/photos/14188066/pexels-photo-14188066.jpeg",
+      "menu_cinnamon": "https://images.pexels.com/photos/351962/pexels-photo-351962.jpeg",
+      "menu_brunch": "https://images.pexels.com/photos/7936963/pexels-photo-7936963.jpeg",
+      "vibe_people": "https://images.pexels.com/photos/3763621/pexels-photo-3763621.jpeg"
+    },
+    "icons": "Lucide React (Leaf, Utensils, Calendar, MapPin, Phone, Dog)"
+  },
+  "motion": {
+    "library": "Framer Motion",
+    "entrance": "Staggered fade-in for menu items.",
+    "scroll": "Parallax effect on hero image.",
+    "hover": "Scale 1.02 on cards, Button fill effect."
+  },
+  "accessibility": {
+    "contrast": "Ensure text on images has a dark overlay or shadow.",
+    "focus": "Visible focus rings on all interactive elements.",
+    "aria": "Proper labels for all form inputs and buttons."
+  },
+  "tech_stack": {
+    "frontend": "React, Tailwind CSS, Framer Motion, Shadcn UI",
+    "backend": "FastAPI",
+    "database": "MongoDB"
+  },
+  "instructions_to_main_agent": [
+    "Use the provided image URLs for the respective sections.",
+    "Implement the 'Bento Grid' layout for the menu categories.",
+    "Ensure the 'Book Now' button is always visible (Sticky Header).",
+    "Use the 'Olive Green' color for primary actions and branding.",
+    "Create a 'Pet Friendly' banner with a cute icon and the 'Caveat' font.",
+    "Mock the Google Maps iframe with a placeholder if no API key is available, but style it nicely.",
+    "Use 'sonner' for toast notifications (e.g., 'Reservation Confirmed').",
+    "Ensure the Admin Panel is protected (mock login if needed) and allows CRUD on Menu items."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not use generic centered layouts.",
+    "Create depth through layered design elements.",
+    "Use glass-morphism effects with backdrop filters.",
+    "Every interaction needs micro-animations.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "All interactive elements MUST include data-testid."
+  ]
+}

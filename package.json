@@ -1,0 +1,12 @@
+{
+  "name": "restaurant-landing-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd frontend && yarn install && yarn build && cd .. && rm -rf build && mv frontend/build build"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "yarn@1.22.22"
+}

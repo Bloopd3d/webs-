@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Manrope:wght@400;500;600&family=Caveat:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: #FAF9F6;
+  color: #2C3E50;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.02em;
+}
+
+.caveat-font {
+  font-family: 'Caveat', cursive;
+}
+
+.glass-effect {
+  background: rgba(250, 249, 246, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+  background-color: #4A5D23;
+  color: white;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #3a4a1c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(74, 93, 35, 0.3);
+}
+
+.btn-secondary {
+  background-color: #C1666B;
+  color: white;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #a85559;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(193, 102, 107, 0.3);
+}
+
+.text-olive {
+  color: #4A5D23;
+}
+
+.text-terracotta {
+  color: #C1666B;
+}
+
+.bg-olive {
+  background-color: #4A5D23;
+}
+
+.bg-terracotta {
+  background-color: #C1666B;
+}
+
+.bg-cream {
+  background-color: #FAF9F6;
+}
+
+.bg-paper {
+  background-color: #F0EFEA;
+}
+
+.hero-image {
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.stagger-fade-in {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.category-btn {
+  padding: 10px 24px;
+  border-radius: 24px;
+  border: 2px solid #4A5D23;
+  background: transparent;
+  color: #4A5D23;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.category-btn:hover {
+  background-color: #4A5D23;
+  color: white;
+  transform: scale(1.05);
+}
+
+.category-btn.active {
+  background-color: #4A5D23;
+  color: white;
+}
+
+.menu-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.menu-card:hover img {
+  transform: scale(1.1);
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+.parallax {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.admin-table th {
+  background-color: #4A5D23;
+  color: white;
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.admin-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.admin-table tr:hover {
+  background-color: #F9FAFB;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .menu-card img {
+    height: 200px;
+  }
+  
+  .modal-content {
+    padding: 24px;
+  }
+  
+  .admin-table {
+    font-size: 14px;
+  }
+  
+  .admin-table th,
+  .admin-table td {
+    padding: 10px 12px;
+  }
+}
