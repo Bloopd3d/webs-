@@ -1,4 +1,7 @@
 {
+    "buildCommand": "cd frontend && yarn install && CI=false yarn build && cd .. && rm -rf build && mv frontend/build build",
+    "outputDirectory": "build",
+    "framework": null,
     "rewrites": [
         {
             "source": "/(.*)",
